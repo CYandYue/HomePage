@@ -47,13 +47,14 @@
                     </p>
 
                     <p style="text-align:center">
-                      <a href="mailto:ychang500@connect.hkust-gz.edu.cn">Email</a> &nbsp;/&nbsp;
+                      <a href="mailto:ychang500@connect.hkust-gz.edu.cn" onclick="copyEmail(event)">Email</a> &nbsp;/&nbsp;
                       <a href="data/CV_ChangYue.pdf">CV</a> &nbsp;/&nbsp;  
                       <a href="https://github.com/CYandYue">GitHub</a> &nbsp;/&nbsp;
                       <a href="https://scholar.google.com/citations?hl=en&user=Pd1YdWIAAAAJ">Google Scholar</a> &nbsp;/&nbsp;
                       <a href="https://cy.terase.cn/">Blog</a> &nbsp;/&nbsp;
                       <a href="javascript:void(0)" onclick="openWeChatModal()">WeChat</a>
                     </p>
+                    <div id="emailToast" class="email-toast" aria-live="polite">Email copied</div>
 
                     <!-- WeChat image function -->
                     <div id="WeChatModal" class="modal">
@@ -64,6 +65,41 @@
                     </div>
                     
                     <script>
+                      const emailAddress = "ychang500@connect.hkust-gz.edu.cn";
+                      let emailToastTimer;
+
+                      function showEmailToast(message) {
+                        var toast = document.getElementById("emailToast");
+                        toast.textContent = message;
+                        toast.classList.add("show");
+                        clearTimeout(emailToastTimer);
+                        emailToastTimer = setTimeout(function() {
+                          toast.classList.remove("show");
+                        }, 1800);
+                      }
+
+                      function copyEmail(event) {
+                        event.preventDefault();
+                        if (navigator.clipboard && window.isSecureContext) {
+                          navigator.clipboard.writeText(emailAddress).then(function() {
+                            showEmailToast("Email copied");
+                          }, function() {
+                            window.location.href = "mailto:" + emailAddress;
+                          });
+                        } else {
+                          var tempInput = document.createElement("textarea");
+                          tempInput.value = emailAddress;
+                          tempInput.style.position = "fixed";
+                          tempInput.style.opacity = "0";
+                          document.body.appendChild(tempInput);
+                          tempInput.focus();
+                          tempInput.select();
+                          document.execCommand("copy");
+                          document.body.removeChild(tempInput);
+                          showEmailToast("Email copied");
+                        }
+                      }
+
                       function openWeChatModal() {
                         document.getElementById("WeChatModal").style.display = "block";
                       }

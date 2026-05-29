@@ -170,6 +170,26 @@ h3 {
   max-width: 400px;
 }
 
+.email-toast {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  z-index: 2;
+  padding: 8px 14px;
+  color: #ffffff;
+  background: rgba(20, 20, 20, 0.9);
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.email-toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
 .close {
   color: #aaa;
   float: right;
