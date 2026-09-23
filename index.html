@@ -5,7 +5,7 @@
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="author" content="Yue Chang">
-    <meta name="viewport" content="width=800px, initial-scale=0.8, maximum-scale=2.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="ky_GtW3ix1x6MhH-pM6PonkpJCmE-237rRUvxvyQjVs" />
 
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -24,31 +24,31 @@
   </head>
 
   <body>
-    <table style="width:100%; max-width:800px; border:0px; border-spacing:0px; border-collapse:separate; margin-left:auto; margin-right:auto;">
+    <table class="page-shell" style="width:100%; max-width:1120px; border:0px; border-spacing:0px; border-collapse:separate; margin-left:auto; margin-right:auto;">
       <tbody>
         <tr style="padding:0px">
           <td style="padding:0px">
 
+            <!-- Main content & News -->
+            <div class="site-grid">
+              <main class="main-column">
             <!-- Introduction & Profile Photo -->
-            <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-left:auto; margin-right:auto;">
-              <tbody>
-                <tr style="padding:0px">
-
-                  <!-- introduction -->
-                  <td style="padding:2.5%; width:64%; vertical-align:middle">
-                    <p class="webname" style="text-align: center;">
+              <section class="profile-panel">
+                <div class="profile-layout">
+                  <div>
+                    <p class="webname">
                       Yue Chang &nbsp;|&nbsp; 常越
                     </p>
 
-                    <p>
+                    <p class="intro-text">
                       I am currently a first-year PhD student at <a href="https://www.hkust-gz.edu.cn/">The Hong Kong University of Science and Technology (Guangzhou)</a>, advised by Prof.
                       <a href="https://sihongxie.github.io/">Sihong Xie</a>.
                       I received my B.Eng. degree in Automation from <a href="http://en.hitsz.edu.cn/">Harbin Institute of Technology, Shenzhen</a>.
                     </p>
 
-                    <p style="text-align:center">
+                    <p class="link-line">
                       <a href="mailto:ychang500@connect.hkust-gz.edu.cn" onclick="copyEmail(event)">Email</a> &nbsp;/&nbsp;
-                      <a href="http://cyandyue.github.io/CY_Resume/">CV</a> &nbsp;/&nbsp;  
+                      <a href="http://cyandyue.github.io/CY_Resume/">CV</a> &nbsp;/&nbsp;
                       <a href="https://github.com/CYandYue">GitHub</a> &nbsp;/&nbsp;
                       <a href="https://scholar.google.com/citations?hl=en&user=Pd1YdWIAAAAJ">Google Scholar</a> &nbsp;/&nbsp;
                       <a href="https://cy.terase.cn/">Blog</a> &nbsp;/&nbsp;
@@ -63,7 +63,7 @@
                         <img src="images/WeChat.jpg" alt="WeChat QR Code" style="width: 100%;">
                       </div>
                     </div>
-                    
+
                     <script>
                       const emailAddress = "ychang500@connect.hkust-gz.edu.cn";
                       let emailToastTimer;
@@ -116,55 +116,47 @@
                         }
                       }
                     </script>
-                  </td>
+                  </div>
 
-                  <!-- profile photo -->
-                  <td style="padding:2.5%; width:20%; max-width:40%">
-                    <a href="images/ChangYue.jpg">
-                      <img 
-                      style="width:100%; max-width:100%; object-fit: cover; border-radius: 0%;" 
-                      alt="profile photo" 
-                      src="images/ChangYue.jpg" 
+                  <a class="profile-photo" href="images/ChangYue.jpg">
+                    <img
+                      alt="profile photo"
+                      src="images/ChangYue.jpg"
                       class="hoverZoomLink">
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            
-            <!-- News -->
-            <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-left:auto; margin-right:auto;">
-              <tbody>
-                <tr>
-                  <td style="padding-top: 0px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; width:100%; vertical-align:middle">
-                    <h2><b>News</b></h2>
-                    <ul class="news-list">
-                      <li>
-                        [2026/07] <a href="https://arxiv.org/abs/2607.13245"><em>JITOMA</em></a> is now available on arXiv!
-                      </li>
-                      <li>
-                        [2026/07] <a href="https://arxiv.org/abs/2607.03920"><em>LH-AVLN</em></a> is now available on arXiv!
-                      </li>
-                      <li>
-                        [2026/06] 🎉 <a href="https://arxiv.org/abs/2601.10168"><em>RAG-3DSG</em></a> was accepted by <a href="https://eccv.ecva.net/">ECCV 2026</a>!
-                      </li>
-                      <li>
-                        [2026/05] 🎉 <a href="https://psg-nav.github.io/"><em>PSG-Nav</em></a> was accepted by <a href="https://icml.cc/virtual/2026/poster/61826">ICML 2026</a>!
-                      </li>
-                      <li>
-                        [2026/03] Selected as <b>Student Representative</b> at the HKUST(GZ) PhD Admission Seminar (Greater Bay Area).
-                      </li>
-                      <li>
-                        [2024/10] 🎉 <a href="https://github.com/CYandYue/Dentist"><em>Denstist</em></a> was accepted by <a href="https://openreview.net/forum?id=ZVDWzgk6L6&referrer=%5Bthe%20profile%20of%20Yue%20Chang%5D(%2Fprofile%3Fid%3D~Yue_Chang3)">TMLR</a>! 
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                  </a>
+                </div>
+              </section>
+
+            <!-- Education -->
+            <section class="section education-section">
+              <h2><b>Education</b></h2>
+              <div class="education-list">
+                <div class="education-item">
+                  <img class="school-logo" src="images/HKUST.png" alt="HKUST(GZ) logo">
+                  <div class="education-copy">
+                    <h3>
+                      The Hong Kong University of Science and Technology (Guangzhou)
+                      <span class="dates">2025.03 - now</span>
+                    </h3>
+                    <p><b>PhD Student</b> &nbsp;|&nbsp; Advisor: Prof. <a href="https://sihongxie.github.io/">Sihong Xie</a></p>
+                  </div>
+                </div>
+
+                <div class="education-item">
+                  <img class="school-logo" src="images/HIT.png" alt="Harbin Institute of Technology logo">
+                  <div class="education-copy">
+                    <h3>
+                      Harbin Institute of Technology, Shenzhen
+                      <span class="dates">2021.09 - 2025.07</span>
+                    </h3>
+                    <p><b>B.Eng. in Automation</b></p>
+                  </div>
+                </div>
+              </div>
+            </section>
 
             <!-- Research Interest -->
-            <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-left:auto; margin-right:auto;">
+            <table class="section-table" style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-left:auto; margin-right:auto;">
               <tbody>
                 <tr>
                   <td style="padding:20px; width:100%; vertical-align:middle">
@@ -179,7 +171,7 @@
             </table>
 
             <!-- Paper List -->
-            <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-left:auto; margin-right:auto;">
+            <table class="paper-table" style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-left:auto; margin-right:auto;">
               <tbody>
                 <!-- JITOMA -->
                 <tr>
@@ -357,7 +349,7 @@
             </table>
 
                     <!-- Award -->
-                    <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-left:auto; margin-right:auto;">
+                    <table class="award-section" style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-left:auto; margin-right:auto;">
                       <tbody>
                         <tr>
                           <td style="padding-top: 0px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; width:100%; vertical-align:middle">
@@ -394,60 +386,34 @@
                             </ul>
                           </td>
                         </tr>
-                      </tbody>
-                    </table>
+	                      </tbody>
+	                    </table>
+              </main>
 
-
-
-            <!-- Experience -->
-            <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-left:auto; margin-right:auto;">
-              <tbody>
-                <tr>
-                  <td style="padding:20px; width:100%; vertical-align:middle">
-                    <h2><b>Experience</b></h2>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-            <!-- HKUST GZ -->
-            <table style="width:98%; margin-left:20px; border:none; padding:0px;">
-              <tbody>
-                <tr>
-                  <td style="padding:25px; width:15%; vertical-align:middle; padding-top:20px;">
-                    <img src="images/HKUST.png" style="width:100%; height:auto;">
-                  </td>
-                  <td style="padding-top:20px; padding-left:20px; width:85%; vertical-align:top;">
-                    <h3>
-                      The Hong Kong University of Science and Technology, Guangzhou, China
-                      <span class="dates">2025.03 - now</span>
-                    </h3>
-                    <b>PhD</b>
-                    <br>
-                    Advisor: Prof. <a href="https://sihongxie.github.io/">Sihong Xie</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-            <!-- HITSZ -->
-            <table style="width:98%; margin-left:20px; border:none; padding:0px;">
-              <tbody>
-                <tr>
-                  <td style="padding:15px; width:15%; vertical-align:middle; padding-top:20px;">
-                    <img src="images/HIT.png" style="width:100%; height:auto;">
-                  </td>
-                  <td style="padding-top:20px; padding-left:20px; width:85%; vertical-align:top;">
-                    <h3>
-                      Harbin Institute of Technology, Shenzhen, China
-                      <span class="dates">2021.09 - 2025.07</span>
-                    </h3>
-                    <b>Undergraduate Student</b>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
+              <aside class="news-panel">
+                <h2><b>News</b></h2>
+                <ul class="news-list">
+                  <li>
+                    [2026/07] <a href="https://arxiv.org/abs/2607.13245"><em>JITOMA</em></a> is now available on arXiv!
+                  </li>
+                  <li>
+                    [2026/07] <a href="https://arxiv.org/abs/2607.03920"><em>LH-AVLN</em></a> is now available on arXiv!
+                  </li>
+                  <li>
+                    [2026/06] 🎉 <a href="https://arxiv.org/abs/2601.10168"><em>RAG-3DSG</em></a> was accepted by <a href="https://eccv.ecva.net/">ECCV 2026</a>!
+                  </li>
+                  <li>
+                    [2026/05] 🎉 <a href="https://psg-nav.github.io/"><em>PSG-Nav</em></a> was accepted by <a href="https://icml.cc/virtual/2026/poster/61826">ICML 2026</a>!
+                  </li>
+                  <li>
+                    [2026/03] Selected as <b>Student Representative</b> at the HKUST(GZ) PhD Admission Seminar (Greater Bay Area).
+                  </li>
+                  <li>
+                    [2024/10] 🎉 <a href="https://github.com/CYandYue/Dentist"><em>Denstist</em></a> was accepted by <a href="https://openreview.net/forum?id=ZVDWzgk6L6&referrer=%5Bthe%20profile%20of%20Yue%20Chang%5D(%2Fprofile%3Fid%3D~Yue_Chang3)">TMLR</a>!
+                  </li>
+                </ul>
+              </aside>
+            </div>
             <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=Q8a8pYPij3WJvep7BQOXmVowHW6YcmouqTSfPnz151E&cl=ffffff&w=a"></script>
 
           </td>

@@ -76,8 +76,18 @@ a:hover {
 }
 
 body {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.6;
+  margin: 0;
+  padding: 28px 16px;
+  color: #222222;
+  background: #f7fafc;
+}
+
+.page-shell {
+  background: #ffffff;
+  box-shadow: 0 18px 42px rgba(29, 48, 68, 0.08);
 }
 
 tr,
@@ -99,10 +109,11 @@ h2 {
   margin: 0;
   font-weight: normal;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   text-decoration: underline;
   text-decoration-color: #66ccff;
   text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
 }
 
 h3 {
@@ -118,23 +129,142 @@ h3 {
 
 .award-list {
   list-style-type: disc;
-  font-size: 16px;
+  font-size: 14px;
+  margin: 12px 0 0 18px;
+  padding: 0;
 }
 
 .award-list li {
-  margin-bottom: 3px;
-  font-size: 16px;
+  margin-bottom: 6px;
+  font-size: 14px;
 }
 
 .award-list .year {
-  float: right
+  float: right;
+  color: #777777;
 }
 
 .webname {
-  padding-top: 20px;
+  padding-top: 0;
   margin: 0;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.site-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  align-items: start;
+}
+
+.main-column {
+  min-width: 0;
+  border-right: 1px solid #dfe8ef;
+}
+
+.profile-panel {
+  padding: 28px 24px 24px;
+  border-bottom: 1px solid #e5edf3;
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 24px;
+  align-items: center;
+}
+
+.intro-text {
+  margin: 12px 0 0;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.link-line {
+  margin: 14px 0 0;
+  text-align: left;
+}
+
+.profile-photo img {
+  display: block;
+  width: 150px;
+  height: 190px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 4px;
+}
+
+.news-panel {
+  position: sticky;
+  top: 24px;
+  padding: 28px 22px 24px 20px;
+}
+
+.section {
+  padding: 20px 24px 8px;
+}
+
+.section-table td {
+  background: #ffffff;
+}
+
+.education-list {
+  margin-top: 10px;
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  padding: 9px 0;
+  border-top: 1px solid #eef3f6;
+}
+
+.education-item:first-child {
+  border-top: 0;
+}
+
+.school-logo {
+  width: 42px;
+  max-height: 42px;
+  object-fit: contain;
+}
+
+.education-copy h3 {
+  padding-bottom: 1px;
+}
+
+.education-copy p {
+  margin: 0;
+  color: #444444;
+}
+
+.paper-table {
+  padding: 0 14px 4px;
+}
+
+.paper-table tr {
+  border-top: 1px solid #eef3f6;
+}
+
+.paper-table td {
+  border-top: 1px solid #eef3f6;
+}
+
+.paper-table tr:first-child td {
+  border-top: 0;
+}
+
+.paper-table img {
+  border-radius: 4px;
+}
+
+.award-section {
+  margin-top: 8px;
+  border-top: 1px solid #e5edf3;
 }
 
 .papertitle {
@@ -206,9 +336,10 @@ h3 {
 }
 
 .dates {
-  font-size: 16px;
+  font-size: 14px;
   color: gray;
   float: right;
+  font-weight: normal;
 }
 
 .TLDR {
@@ -223,6 +354,13 @@ h3 {
 .news-list {
   list-style-type: disc;
   font-size: 14px;
+  margin: 12px 0 0 18px;
+  padding: 0;
+}
+
+.news-list li {
+  margin-bottom: 9px;
+  line-height: 1.4;
 }
 
 .strong-author {
@@ -234,4 +372,51 @@ h3 {
 .author {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding: 0;
+  }
+
+  .page-shell {
+    box-shadow: none;
+  }
+
+  .site-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-column {
+    border-right: 0;
+  }
+
+  .profile-panel {
+    padding: 22px 18px;
+  }
+
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-photo img {
+    width: 128px;
+    height: 160px;
+  }
+
+  .news-panel {
+    position: static;
+    padding: 18px;
+    border-top: 1px solid #dfe8ef;
+  }
+
+  .section {
+    padding: 18px;
+  }
+
+  .dates {
+    display: block;
+    float: none;
+    margin-top: 2px;
+  }
 }
