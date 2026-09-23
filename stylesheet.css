@@ -427,7 +427,16 @@ h3 {
   }
 
   .page-shell {
+    display: block;
+    width: 100% !important;
     box-shadow: none;
+  }
+
+  .page-shell > tbody,
+  .page-shell > tbody > tr,
+  .page-shell > tbody > tr > td {
+    display: block;
+    width: 100%;
   }
 
   .site-grid {
@@ -435,31 +444,67 @@ h3 {
   }
 
   .main-column {
+    display: contents;
     border-right: 0;
   }
 
   .profile-panel {
-    padding: 18px;
+    order: 1;
+    padding: 18px 16px 12px;
   }
 
   .profile-layout {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .profile-photo {
+    order: -1;
+    justify-self: center;
   }
 
   .profile-photo img {
-    width: 128px;
-    height: 160px;
+    width: 120px;
+    height: 152px;
+  }
+
+  .webname {
+    text-align: center;
+    font-size: 26px;
+  }
+
+  .link-line {
+    text-align: center;
   }
 
   .news-panel {
+    order: 2;
     position: static;
-    padding: 18px;
-    margin-top: 0;
-    border-top: 1px solid #dfe8ef;
+    margin: 4px 16px 8px;
+    padding: 12px 14px 2px;
+    border-top: 0;
   }
 
   .section {
+    order: 3;
     padding: 18px;
+  }
+
+  .section-table {
+    order: 4;
+    display: block;
+    width: 100% !important;
+  }
+
+  .section-table tbody,
+  .section-table tr,
+  .section-table td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .section-table td {
+    padding: 14px 16px 6px !important;
   }
 
   .dates {
@@ -468,12 +513,74 @@ h3 {
     margin-top: 2px;
   }
 
+  .paper-table {
+    order: 5;
+    display: block;
+    width: calc(100% - 32px) !important;
+    margin: 0 16px !important;
+  }
+
+  .paper-table tbody,
+  .paper-table tr,
+  .paper-table td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .paper-table tr {
+    padding: 12px 0;
+  }
+
+  .paper-table td {
+    padding: 0 !important;
+    border-top: 0;
+  }
+
   .paper-image-cell {
-    width: 32%;
+    width: 100%;
     min-width: 0;
+    padding: 0 !important;
   }
 
   .paper-image-frame {
     width: 100%;
+    max-width: 340px;
+    margin-bottom: 8px;
+  }
+
+  .paper-info-cell {
+    padding: 0 !important;
+  }
+
+  .paper-year-row {
+    padding: 14px 0 2px !important;
+  }
+
+  .paper-year-row td {
+    padding: 0 !important;
+    font-size: 17px;
+  }
+
+  .award-section {
+    order: 6;
+    display: block;
+    width: calc(100% - 32px) !important;
+    margin: 10px 16px 0 !important;
+  }
+
+  .award-section tbody,
+  .award-section tr,
+  .award-section td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .award-section td {
+    padding: 0 0 14px !important;
+  }
+
+  .award-list .year {
+    float: none;
+    margin-left: 6px;
   }
 }
