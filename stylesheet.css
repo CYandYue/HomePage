@@ -294,6 +294,14 @@ h3 {
   border-radius: 4px;
 }
 
+.service-section {
+  margin-top: 8px;
+}
+
+.service-section p {
+  margin: 6px 0 0;
+}
+
 .award-section {
   margin-top: 8px;
   border-top: 0;
@@ -561,8 +569,13 @@ h3 {
     font-size: 17px;
   }
 
-  .award-section {
+  .service-section {
     order: 6;
+    padding: 10px 16px 4px;
+  }
+
+  .award-section {
+    order: 7;
     display: block;
     width: calc(100% - 32px) !important;
     margin: 10px 16px 0 !important;
