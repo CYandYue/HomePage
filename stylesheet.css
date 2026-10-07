@@ -295,7 +295,7 @@ h3 {
 }
 
 .service-section {
-  margin-top: 8px;
+  margin-top: 28px;
 }
 
 .service-section p {
@@ -303,7 +303,7 @@ h3 {
 }
 
 .award-section {
-  margin-top: 8px;
+  margin-top: 28px;
   border-top: 0;
 }
 
@@ -512,6 +512,7 @@ h3 {
   }
 
   .section-table td {
+    box-sizing: border-box;
     padding: 14px 16px 6px !important;
   }
 
@@ -578,7 +579,7 @@ h3 {
     order: 7;
     display: block;
     width: calc(100% - 32px) !important;
-    margin: 10px 16px 0 !important;
+    margin: 28px 16px 0 !important;
   }
 
   .award-section tbody,
