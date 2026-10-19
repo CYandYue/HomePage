@@ -241,8 +241,13 @@
               </tbody>
             </table>
 
+            <div id="publication-controls" class="publication-controls" role="group" aria-label="Publication view" hidden>
+              <button type="button" class="publication-filter" data-view="selected" aria-controls="publication-list" aria-pressed="true">Selected Publications</button>
+              <button type="button" class="publication-filter" data-view="all" aria-controls="publication-list" aria-pressed="false">All Publications</button>
+            </div>
+
             <!-- Paper List -->
-            <table class="paper-table" style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-left:auto; margin-right:auto;">
+            <table id="publication-list" class="paper-table" aria-label="Publications" style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-left:auto; margin-right:auto;">
               <tbody>
                 <tr class="paper-year-row">
                   <td colspan="2">In the Year of 2026</td>
@@ -346,7 +351,7 @@
                 </tr>
 
                 <!-- RAG-3DSG -->
-                <tr>
+                <tr data-selected="true">
                   <td class="paper-image-cell">
                     <div class="paper-image-frame">
                       <img src='images/RAG3DSG_web.png' alt="RAG-3DSG teaser">
@@ -380,7 +385,7 @@
                 </tr>
 
                 <!-- PSG-Nav -->
-                <tr>
+                <tr data-selected="true">
                   <td class="paper-image-cell">
                     <div class="paper-image-frame">
                       <img src='images/PSGNav.png' alt="PSG-Nav teaser">
@@ -508,6 +513,32 @@
 
               </tbody>
             </table>
+
+            <script>
+              (function() {
+                const controls = document.getElementById("publication-controls");
+                const papers = document.getElementById("publication-list");
+                const buttons = controls.querySelectorAll("button[data-view]");
+
+                function setPublicationView(view) {
+                  papers.dataset.view = view;
+                  buttons.forEach(function(button) {
+                    button.setAttribute("aria-pressed", String(button.dataset.view === view));
+                  });
+                }
+
+                controls.addEventListener("click", function(event) {
+                  const button = event.target.closest("button[data-view]");
+                  if (button) {
+                    setPublicationView(button.dataset.view);
+                  }
+                });
+
+                // Without JavaScript, the complete publication list remains visible.
+                setPublicationView("selected");
+                controls.hidden = false;
+              })();
+            </script>
 
             <!-- Academic Service -->
             <section class="section service-section" aria-labelledby="academic-service-title">
